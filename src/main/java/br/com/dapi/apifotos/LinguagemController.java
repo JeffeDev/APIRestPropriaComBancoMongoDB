@@ -19,13 +19,13 @@ public class LinguagemController {
 		return "Oi";
 	}
 	
-	@GetMapping(value = "/jn")
+	@GetMapping(value = "/lista")
 	public List<Linguagem> obterImagens() {
 		List<Linguagem> linguagens = repositorio.findAll();
 		return linguagens;
 	}
 	
-	@PostMapping(value = "/jn")
+	@PostMapping(value = "/lista")
 	public Linguagem cadastrarLinguagem(@RequestBody Linguagem linguagem) {
 		Linguagem linguagemSalva  = repositorio.save(linguagem);
 		return linguagemSalva;
